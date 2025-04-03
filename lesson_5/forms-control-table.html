@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>פקדי טופס ב-HTML</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        direction: rtl;
+      }
+      table {
+        width: auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 2px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      tr :nth-child(even) {
+        direction: ltr;
+        text-align: left;
+      }
+      table tr.header th {
+        background-color: #f2f2f2;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">פקדי טופס ב-HTML</h1>
+      <table>
+        <tr class="header">
+          <th>סוג הפקד</th>
+          <th>HTML תגית</th>
+          <th>תצוגה בפועל</th>
+        </tr>
+        <tr>
+          <td>תיבת טקסט</td>
+          <td>
+            &lt;input type="text" /&gt; <br />
+            &lt;input type="text" placeholder="שם מלא" maxlength="20" required
+            /&gt;
+          </td>
+          <td>
+            <input type="text" placeholder="שם מלא" maxlength="20" required />
+          </td>
+        </tr>
+        <tr>
+          <td>סיסמה</td>
+          <td>
+            &lt;input type="password"&gt;<br />
+            &lt;input type="password" placeholder="הזן סיסמה"&gt;
+          </td>
+          <td>
+            <input type="password" placeholder="*******" /><br />
+            <input type="password" placeholder="הזן סיסמה" />
+          </td>
+        </tr>
+        <tr>
+          <td>אימייל</td>
+          <td>&lt;input type="email" placeholder="example@mail.com"&gt;</td>
+          <td><input type="email" placeholder="example@mail.com" /></td>
+        </tr>
+        <tr>
+          <td>בחירת קובץ</td>
+          <td>&lt;input type="file"&gt;</td>
+          <td><input type="file" /></td>
+        </tr>
+        <tr>
+          <td>מספר</td>
+          <td>&lt;input type="number" min="1" max="100"&gt;</td>
+          <td><input type="number" min="1" max="100" /></td>
+        </tr>
+        <tr>
+          <td>כפתור בחירה (רדיו)</td>
+          <td>
+            &lt;input type="radio" name="group" <b>checked</b>&gt; אפשרות 1
+            <br />
+            &lt;input type="radio" name="group"&gt; אפשרות 2
+          </td>
+          <td>
+            <input type="radio" name="group" checked /> אפשרות 1 <br />
+            <input type="radio" name="group" /> אפשרות 2
+          </td>
+        </tr>
+        <tr>
+          <td>תיבת סימון (צ'קבוקס)</td>
+          <td>
+            &lt;input type="checkbox" <b>checked</b>&gt; מסומן <br />
+            &lt;input type="checkbox"&gt; לא מסומן
+          </td>
+          <td>
+            <input type="checkbox" checked /> מסומן <br />
+            <input type="checkbox" /> לא מסומן
+          </td>
+        </tr>
+        <tr>
+          <td>רשימה נגללת</td>
+          <td>
+            &lt;select&gt;<br />
+            &nbsp;&nbsp;&lt;option <b>selected</b>&gt;אופציה 1&lt;/option&gt;<br />
+            &nbsp;&nbsp;&lt;option&gt;אופציה 2&lt;/option&gt;<br />
+            &lt;/select&gt;
+          </td>
+          <td>
+            <select>
+              <option selected>אופציה 1</option>
+              <option>אופציה 2</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>תיבת טקסט מרובת שורות</td>
+          <td>&lt;textarea rows="2" cols="30"&gt;&lt;/textarea&gt;</td>
+          <td><textarea rows="2" cols="30"></textarea></td>
+        </tr>
+        <tr>
+          <td>כפתור שליחה</td>
+          <td>&lt;input type="submit" value="שלח"&gt;</td>
+          <td><input type="submit" value="שלח" /></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

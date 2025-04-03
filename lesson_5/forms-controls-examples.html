@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>פקדי טופס ב-HTML</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        direction: rtl;
+      }
+
+      .container-box > div {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+      }
+      label {
+        width: 250px;
+        font-weight: bold;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>פקדי טופס ב-HTML</h1>
+
+      <div class="container-box">
+        <div>
+          <label>תיבת טקסט:</label>
+          <input type="text" placeholder="שם מלא" maxlength="20" required />
+        </div>
+        <div>
+          <label>סיסמה: </label>
+          <input type="password" placeholder="הזן סיסמה" />
+        </div>
+        <div>
+          <label>אימייל:</label>
+          <input type="email" placeholder="example@mail.com" />
+        </div>
+        <div>
+          <label>מספר:</label>
+          <input type="number" min="1" max="100" />
+        </div>
+        <div>
+          <label>מספר טלפון:</label>
+          <input
+            type="tel"
+            placeholder="050-1234567"
+            pattern="[0-9]{3}-[0-9]{7}"
+          />
+        </div>
+      </div>
+
+      <div class="container-box">
+        <div>
+          <label>כפתור בחירה (רדיו):</label>
+          <input type="radio" name="group" checked /> אפשרות 1 <br />
+          <input type="radio" name="group" /> אפשרות 2
+        </div>
+
+        <div>
+          <label>תיבת סימון (צ'קבוקס):</label>
+          <input type="checkbox" checked /> מסומן <br />
+          <input type="checkbox" /> לא מסומן
+        </div>
+        <div>
+          <label>רשימה נגללת:</label>
+          <select>
+            <option selected>אופציה 1</option>
+            <option>אופציה 2</option>
+          </select>
+        </div>
+        <div>
+          <label>תיבת טקסט מרובת שורות:</label>
+          <textarea rows="2" cols="30"></textarea>
+        </div>
+      </div>
+
+      <div class="container-box">
+        <div>
+          <label>תאריך:</label>
+          <input type="date" />
+        </div>
+        <div>
+          <label>שעה:</label>
+          <input type="time" />
+        </div>
+
+        <div>
+          <label>אתר:</label>
+          <input type="url" placeholder="https://example.com" />
+        </div>
+        <div>
+          <label>חיפוש:</label>
+          <input type="search" placeholder="חפש כאן..." />
+        </div>
+        <div><label>בחירת קובץ:</label><input type="file" /></div>
+      </div>
+
+      <div>
+        <label>כפתור שליחה:</label>
+        <input type="submit" value="שלח" />
+      </div>
+    </div>
+  </body>
+</html>
