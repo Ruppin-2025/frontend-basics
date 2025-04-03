@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position & Form Examples</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        direction: rtl;
+      }
+      .container-box {
+        border: 2px solid black;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .relative-box {
+        position: relative;
+        top: 10px;
+        right: 20px;
+        background-color: lightblue;
+        padding: 10px;
+        border: 1px solid blue;
+      }
+      .absolute-container {
+        position: relative;
+        width: 300px;
+        height: 150px;
+        border: 2px dashed black;
+        margin-bottom: 20px;
+      }
+      .absolute-box {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        background-color: orange;
+        padding: 10px;
+        border: 1px solid black;
+      }
+      .fixed-box {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        font-weight: bold;
+        z-index: 1000;
+      }
+      .sticky-box {
+        position: sticky;
+        top: 10px;
+        background-color: green;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+        border-bottom: 2px solid darkgreen;
+        width: 100%;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-box">
+      <div class="fixed-box">Fixed Position - תמיד בראש</div>
+      <h1 class="mt-5">דוגמאות Position</h1>
+    </div>
+
+    <div class="container-box">
+      <h2>Relative Position</h2>
+      <p>האלמנט מוזז יחסית למיקומו המקורי.</p>
+      <div class="relative-box">אני מוזז 10px למטה ו-20px שמאלה</div>
+    </div>
+
+    <div class="container-box">
+      <h2>Absolute Position</h2>
+      <p>האלמנט ממוקם ביחס להורה הראשון שאינו static.</p>
+      <div class="absolute-container">
+        <p>אני relative</p>
+        <div class="absolute-box">
+          אני ממוקם באופן מוחלט בתוך הקונטיינר <br />
+          30px למטה ו-50px ימינה
+        </div>
+      </div>
+    </div>
+
+    <div class="container-box" style="height: 600px; overflow-y: scroll">
+      <h2>Sticky Position</h2>
+      <p>האלמנט נשאר במקומו עד שמגיע לגבול הדף.</p>
+      <div class="sticky-box">אני נדבק למעלה בעת גלילה</div>
+      <p style="height: 1000px">גלול למטה כדי לבדוק את התכונה</p>
+    </div>
+
+    <h1>פקדי טופס</h1>
+    <form class="container">
+      <div class="mb-3">
+        <label class="form-label">שם מלא</label>
+        <input type="text" class="form-control" placeholder="הכנס שם מלא" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">סיסמה</label>
+        <input type="password" class="form-control" placeholder="********" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">אימייל</label>
+        <input
+          type="email"
+          class="form-control"
+          placeholder="example@mail.com"
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">בחירה</label>
+        <select class="form-select">
+          <option>אפשרות 1</option>
+          <option>אפשרות 2</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label><input type="checkbox" /> אני מסכים לתנאים</label>
+      </div>
+      <button class="btn btn-primary">שלח</button>
+    </form>
+  </body>
+</html>
