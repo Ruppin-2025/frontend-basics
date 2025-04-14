@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var x = 3;
+        a = 5.4;
+        b = "noam";
+   
+
+        function f1() {
+            var c = a + x;
+            if (true) {
+                let y = 6;
+                console.log(y);
+            }
+            /*console.log(y);*/
+            console.log("c is " + c);
+            alert("hiii");
+        }
+
+        function f2(a, b) {
+            c = a + b;
+            return c;
+        }
+        /*f1();*/
+        /*console.log("c is " + c);*/
+
+
+        t = f2(3, 4);
+        console.log("t is " + t);
+        console.log("c is " + c);
+    </script>
+</head>
+<body>
+    <input type="button" value="click me" onclick="f1()"/>
+</body>
+</html>

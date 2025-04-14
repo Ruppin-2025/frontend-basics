@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basics</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+
+    <script>
+      // סוגי משתנים:
+      let a = 5; // Number - שלם
+      let b = 10.5; // Number - עשרוני
+      let c = "Hello, World!"; // String - מחרוזת
+      let d = true; // Boolean - true or false - בוליאני
+      let e = null; // Null (The type is object) - ריק
+      let f; // Undefined - לא שמו ערך בכלל (The type is undefined) - לא הוגדר
+      let j = []; // Array (The type is object) - מערך
+      let h = {}; // Object (The type is object) - אובייקט
+      let i = alert("Hello, World!"); // Function (The type is object) - פונקציה
+    </script>
+
+    <script>
+      // 🌍 משתנה גלובלי:
+
+      let counter = 0;
+
+      function addOne() {
+        counter++;
+      }
+
+      function subOne() {
+        counter--;
+      }
+
+      // ✅ המשתנה מוגדר מחוץ לפונקציות, ולכן שתיהן מכירות אותו.
+    </script>
+
+    <script>
+      // 🏠 משתנה מקומי לפונקציה:
+
+      function addOne() {
+        let counter = 0;
+        counter++;
+      }
+
+      function subOne() {
+        counter--;
+        // ❌ Error – counter לא קיים פה
+      }
+    </script>
+
+    <script>
+      // ⚠️ משתנה בלי let/const/var = גלובלי בטעות:
+
+      function addOne() {
+        counter = 0; // נוצר משתנה גלובלי
+        counter++;
+      }
+
+      function subOne() {
+        counter--;
+        // ✅ יעבוד – אם addOne כבר רץ לפני
+      }
+
+      // ⚠️ מסוכן! לא מומלץ! זה עלול ליצור באגים שקשה למצוא.
+    </script>
+
+    <script>
+      // 📤 משתנה שנשלח לפונקציה – עותק זמני
+
+      let name = "Luna";
+
+      function changeName(name) {
+        name = "Nova";
+      }
+
+      console.log(name); // עדיין "Luna"
+
+      // 📎 הערך שנשלח לפונקציה נשלח כעותק.
+      // מה שמשתנה בתוך הפונקציה – לא משפיע על המקורי.
+    </script>
+
+    <!-- JavaScript Functions: -->
+    <script>
+      function userClickAlert() {
+        alert("Hello, World!");
+      }
+
+      userClickAlert(); // Hello, World!
+
+      // פונקציה רגילה:
+      function greet(name) {
+        return "Hello, " + name + "!";
+      }
+
+      console.log(greet("Luna")); // Hello, Luna!
+
+      // פונקציה אנונימית:
+      const greetAnonymous = function (name) {
+        return "Hello, " + name + "!";
+      };
+
+      console.log(greetAnonymous("Luna")); // Hello, Luna!
+
+      // פונקציה חץ:
+      const greetArrow = (name) => {
+        return "Hello, " + name + "!";
+      };
+
+      console.log(greetArrow("Luna")); // Hello, Luna!
+    </script>
+
+    <script>
+      function changeTextColor() {
+       
+        document.getElementById("myBtn").innerHTML = "Hello, World!";
+      
+      }
+    </script>
+  </head>
+  <body>
+    
+    <input id="myBtn" type="button" value="Click Me!" onclick="userClick()" />
+
+
+  </body>
+</html>
