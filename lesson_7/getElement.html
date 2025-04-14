@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+      function changeColor() {
+        var arrH1 = document.querySelectorAll("h1");
+        for (var i = 0; i < arrH1.length; i++) {
+          arrH1[i].style.color = "red";
+        }
+
+        var arrRed = document.getElementsByClassName("red");
+        console.log(arrRed);
+      }
+    </script>
+  </head>
+  <body>
+    <input
+      type="button"
+      value="change color"
+      id="btn"
+      onclick="changeColor()"
+    />
+    <h1>this is h1</h1>
+    <h1>this is h1</h1>
+    <h1 class="red">this is h1</h1>
+    <h3 class="red">this is h1</h3>
+    <p class="red">this is p</p>
+  </body>
+</html>

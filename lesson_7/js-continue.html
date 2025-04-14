@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- מערכים -->
+    <!-- מערך מוגדר באמצעות [], מערכים ב-javascript יכולים להכיל טיפוסים מעורבים. -->
+    <script>
+      let arr1 = [1, "2", 3]; // מערך עם מספרים ומחרוזות
+      let arr2 = [true, "שלום", 3]; // מערך עם בוליאני, מחרוזת ומספר
+
+      console.log(arr1[1]); // גישה לאלמנט במערך - מחזיר 2
+      console.log(arr2[1]); // גישה לאלמנט במערך - מחזיר שלום
+    </script>
+
+    <!-- מערכים - פונקציות ותכונות -->
+    <script>
+      let arr = [1, "hello", "world"];
+
+      arr.unshift("first"); // מוסיף אלמנט בתחילת המערך
+      console.log(arr); // ["first", 1, "hello", "world"]
+
+      arr.push("last"); // מוסיף אלמנט בסוף המערך
+      console.log(arr); // ["first", 1, "hello", "world", "last"]
+
+      arr.shift(); // מסיר את האלמנט הראשון במערך
+      console.log(arr); // [1, "hello", "world", "last"]
+
+      arr.pop(); // מסיר את האלמנט האחרון במערך
+      console.log(arr); // [1, "hello", "world"]
+
+      arr.length; // מחזיר את אורך המערך - 3
+      console.log(arr.length); // 3
+
+      arr[0] = "new"; // משנה את האלמנט הראשון במערך
+      console.log(arr); // ["new", "hello", "world"]
+    </script>
+
+    <!-- פעולות מתמטיות על משתנים -->
+    <script>
+      "5" - "5"; // מחזיר 0 (מספר)
+      "5" + "5"; // מחזיר 55 (מחרוזת)
+      "5" * "5"; // מחזיר 25 (מספר)
+      "5" / "5"; // מחזיר 1 (מספר)
+
+      "5" - 5; // מחזיר 0 (מספר)
+      "5" + 5; // מחזיר 55 (מחרוזת)
+      "5" * 5; // מחזיר 25 (מספר)
+      "5" / 5; // מחזיר 1 (מספר)
+
+      "hello " + 10; // ??                      // hello 10
+      "hello " + 10 + 5; // ??                  // hello 105
+      10 + 5 + " hello"; // ??                  // 15 hello
+    </script>
+
+    <!-- פונקציות מובנות - מספרים -->
+    <script>
+      parseFloat("string"); // מחזיר NaN (Not a Number) - לא מספר
+      parseInt("string"); // מחזיר NaN (Not a Number) - לא מספר
+      Number("object"); // מחזיר NaN (Not a Number) - לא מספר
+
+      // דוגמאות
+      parseInt("10"); // מחזיר 10 (מספר שלם)
+      parseInt("10.5"); // מחזיר 10 (מספר שלם)
+      parseInt("10.8"); // מחזיר 10 (מספר שלם)
+      parseInt("10 20"); // מחזיר 10 (מספר שלם)
+      parseInt("hello 10 20"); // מחזיר NaN (Not a Number) - לא מספר
+      parseInt(true); // מחזיר NaN (Not a Number) - לא מספר
+      parseFloat("10.5"); // מחזיר 10.5 (מספר עשרוני)
+      Number(true); // מחזיר 1 (מספר שלם)
+      Number(false); // מחזיר 0 (מספר שלם)
+      Number("10"); // מחזיר 10 (מספר שלם)
+      Number("10 20"); // מחזיר NaN (Not a Number) - לא מספר
+    </script>
+
+    <!-- ספריית Math -->
+    <script>
+      Math.PI; // מחזיר 3.141592653589793 (מספר עשרוני)
+      Math.abs(-5); // מחזיר 5 (מספר שלם) - ערך מוחלט
+      Math.round(5.4);
+      Math.round(5.6); // מחזיר 6 (מספר שלם) - עיגול למספר שלם הקרוב ביותר
+      Math.floor(5.6); // מחזיר 5 (מספר שלם) - עיגול כלפי מטה
+      Math.ceil(5.4); // מחזיר 6 (מספר שלם) - עיגול כלפי מעלה
+      Math.random();
+      Math.random() * 10; // מחזיר מספר אקראי בין 0 ל-10
+      Math.min(1, -1, 3, 5); // מחזיר -1 (מספר שלם) - המספר הקטן ביותר
+      Math.max(1, -1, 3, 5); // מחזיר 5 (מספר שלם) - המספר הגדול ביותר
+    </script>
+
+    <!-- פונקציות על מחרוזות -->
+    <script>
+      let str = "Hello, World!"; // מחרוזת
+      str.length; // מחזיר 13 (מספר שלם) - אורך המחרוזת
+      str.search("World"); // מחזיר 7 (מספר שלם) - המיקום הראשון של המילה "World" במחרוזת
+
+      str.substring(1, 4); // מחזיר "ell" (מחרוזת) - תת-מחרוזת מהאינדקס 1 עד 4
+      str.substr(1, 4); // מחזיר "ello" (מחרוזת) - תת-מחרוזת מהאינדקס 1 באורך 4
+      str.split(","); // מחזיר ["Hello", " World!"] (מערך) - מפצל את המחרוזת לפי התו ","
+
+      str.replace("World", "JavaScript"); // מחזיר "Hello, JavaScript!" (מחרוזת) - מחליף את המילה "World" ב-"JavaScript"
+      str.replace("o", "c"); // מחזיר "Hellc, World!" (מחרוזת) - מחליף את האות "o" ב-"c"
+
+      str.toUpperCase(); // מחזיר "HELLO, WORLD!" (מחרוזת) - הופך את המחרוזת לאותיות גדולות
+      str.toLowerCase(); // מחזיר "hello, world!" (מחרוזת) - הופך את המחרוזת לאותיות קטנות
+
+      str.trim(); // מחזיר "Hello, World!" (מחרוזת) - מסיר רווחים מיותרים מההתחלה והסוף של המחרוזת
+      str.charAt(0); // מחזיר "H" (מחרוזת) - האות הראשונה במחרוזת
+      str.charAt(1); // מחזיר "e" (מחרוזת) - האות השנייה במחרוזת
+
+      str.indexOf("o"); // מחזיר 4 (מספר שלם) - המיקום הראשון של האות "o" במחרוזת
+      str.lastIndexOf("o"); // מחזיר 8 (מספר שלם) - המיקום האחרון של האות "o" במחרוזת
+
+      str.startsWith("Hello"); // מחזיר true (בוליאני) - האם המחרוזת מתחילה ב-"Hello"?
+      str.endsWith("World!"); // מחזיר true (בוליאני) - האם המחרוזת מסתיימת ב-"World!"
+    </script>
+
+    <!-- לולאות -->
+    <!-- for -->
+    <script>
+      for (let i = 0; i < 5; i++) {
+        console.log(i); // מחזיר 0, 1, 2, 3, 4
+      }
+
+      for (let i = 0, len = 5; i < len; i++) {
+        console.log(i);
+      }
+
+      let len = 5;
+      for (let i = 0; i < len; i++) {
+        console.log(i);
+      }
+    </script>
+
+    <!-- while -->
+    <script>
+      // we don't know how many times we want to run the loop
+      while (i > 5) {
+        // some code
+        i--;
+      }
+    </script>
+    <!-- if/else statement -->
+    <script>
+      if (a == b) {
+        // a!=b for unequal
+        console.log("a is equal to b");
+      } else {
+        console.log("a is not equal to b");
+      }
+    </script>
+
+    <!-- פונקציות על הDOM -->
+    <script>
+      document.getElementById("ID_NAME"); // returns the element with the given id name
+
+      document.getElementsByTagName("TAG_NAME"); // returns an array of elements with the given tag name
+      document.getElementsByClassName("CLASS_NAME"); // same as tag name but by class name
+
+      let elements = document.getElementsByTagName("h1"); // get array of all h1 in the document
+      elements[0]; // the first element in the array (the first h1 in the document)
+      elements.length; // the length of the array (the number of h1 in the document)
+    </script>
+
+    <!-- QuerySelector -->
+    <script>
+      document.querySelector("#myId"); // same as getElementById
+      document.querySelector(".myClass"); // same as getElementsByClassName
+      document.querySelector("div h1"); // get the first h1 inside a div
+
+      // כל האלמנטים התואמים:
+      document.querySelectorAll(".myClass"); // returns an array of all elements with the class name "myClass"
+      document.querySelectorAll("div h1"); // returns an array of all h1 inside a div
+      document.querySelectorAll("div > h1"); // returns an array of all h1 inside a div (direct children only)
+    </script>
+
+    <!-- דוגמאות על שימוש בקוד -->
+    <script>
+      function changeColor() {
+        let arrH1 = document.getElementsByTagName("h1");
+        for (let i = 0; i < arrH1.length; i++) {
+          arrH1[i].style.color = "red"; // משנה את צבע הכותרת לאדום
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+    
+    <h1>hi</h1>
+    <div id="content">
+      <h1>hello</h1>
+    </div>
+
+    <script>
+      document
+        .getElementById("content")
+        .getElementsByTagName("h1")[0].innerHTML = "Hello, World!";
+      // או
+      document.querySelector("#content h1").innerHTML = "Hello, World!";
+    </script>
+
+    <!-- מדוע לדעתכם הסקריפט למטה ? -->
+  </body>
+</html>
